@@ -24,6 +24,7 @@ jobs:
       - name: Build APK
         run: |
           flutter build apk --debug 2>&1
+          echo "EXIT_CODE=$?"
           
       - name: Upload APK
         uses: actions/upload-artifact@v4
